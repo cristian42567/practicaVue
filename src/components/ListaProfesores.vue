@@ -14,7 +14,11 @@
       <label>Materias: </label><input type="text" v-model="grupoMaterias" /><button @click="agregarMateria()">Agregar materia</button>
     </div>
     <div>
-
+      <td>
+        <ul>
+          <li v-for="(elm, index) in profesor.materia" :key="index">{{ elm }}</li>
+        </ul>
+      </td>
     </div>
     <div>
       <label>Poner check si está entregada la documentación: </label
@@ -40,9 +44,16 @@ let grupoProfesores = ref([]);
 let grupoMaterias = ref('');
 
 const agregarMateria = () => {
-  profesor.value.materia.push(grupoMaterias.value);
-  grupoMaterias.value = '';
+  if (grupoMaterias.value == '') {
+    alert('Debes añadir una materia')
+  }else{
+    profesor.value.materia.push(grupoMaterias.value);
+    grupoMaterias.value = '';
+  }
 }
+
+
+
 </script>
 
 <style scoped></style>
