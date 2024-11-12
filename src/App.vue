@@ -1,7 +1,9 @@
 <template>
-
+  <ListaProfesores />
 </template>
 
-<script setup></script>
+<script setup>
+import ListaProfesores from './components/ListaProfesores.vue';
+</script>
 
 <style scoped></style>
