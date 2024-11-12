@@ -24,7 +24,7 @@
       <label>Poner check si está entregada la documentación: </label
       ><input type="checkbox" v-model="profesor.documentacion" />
     </div>
-    <button>Agregar profesor</button>
+    <button @click="agregarProfesor()">Agregar profesor</button>
   </section>
 </template>
 
@@ -52,6 +52,9 @@ const agregarMateria = () => {
   }
 }
 
+const agregarProfesor = () =>{
+  
+}
 
 
 </script>
